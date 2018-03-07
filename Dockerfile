@@ -11,5 +11,5 @@ RUN go build -o interval-mongodump main.go
 FROM mongo:3.2
 VOLUME /backup
 COPY --from=0 /go/src/app/interval-mongodump /
-ENTRYPOINT
+ENTRYPOINT []
 CMD ["/interval-mongodump"]
